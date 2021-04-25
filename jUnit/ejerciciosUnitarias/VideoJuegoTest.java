@@ -27,8 +27,8 @@ class VideoJuegoTest {
 
 	@Test
 	void testGetsYSets() {
-		v.setcompaÃ±ia("EA");
-		assertEquals("EA",v.getcompaÃ±ia());
+		v.setcompañia("EA");
+		assertEquals("EA",v.getcompañia());
 		v.setGenero("Shooter");
 		assertEquals("Shooter",v.getGenero());
 		v.setHorasEstimadas(50);
@@ -39,12 +39,40 @@ class VideoJuegoTest {
 	
 	@Test
 	void testCompareTo() {
-		fail("Not yet implemented");
+		v.setHorasEstimadas(200);
+		Videojuego v2 = new Videojuego();
+		
+		v2.setHorasEstimadas(100);
+		assertEquals(1,v.compareTo(v2));
+		
+		v.setHorasEstimadas(50);
+		assertEquals(-1,v.compareTo(v2));
+		
+		v.setHorasEstimadas(100);
+		assertEquals(0,v.compareTo(v2));
 	}
 
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
+		v.setTitulo("GTA V");
+		v.setGenero("ACCION");
+		v.setcompañia("RockStar");
+		v.setHorasEstimadas(300);
+		assertEquals("Informacion del videojuego: \n" +
+	               "\tTitulo: GTA V\n" +
+	               "\tHoras estimadas: 300\n" +
+	               "\tGenero: ACCION\n" +
+	               "\tcompaÃ±ia: RockStar",v.toString());
 	}
 
+	@Test
+	void testEqualsJuego() {
+		v.setTitulo("GTA V");
+		v.setcompañia("RockStar");
+		Videojuego v2 = new Videojuego("GTA V", "RockStar");
+		assertTrue(v.equals(v2));
+		
+		Videojuego v3 = new Videojuego("GTA V", "Yo");
+		assertFalse(v.equals(v3));
+	}
 }

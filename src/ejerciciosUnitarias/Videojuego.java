@@ -57,7 +57,7 @@ public class Videojuego implements Entregable{
    /**
     * Compañia del videojuego
     */
-   private String compañia;
+   private String compa�ia;
  
    //Métodos publicos
  
@@ -113,16 +113,16 @@ public class Videojuego implements Entregable{
     * Devuelve el compañia del videojuego
     * @return compañia del videojuego
     */
-   public String getcompañia() {
-       return compañia;
+   public String getcompa�ia() {
+       return compa�ia;
    }
  
    /**
     * Modifica el compañia del videojuego
     * @param compañia a cambiar
     */
-   public void setcompañia(String compañia) {
-       this.compañia = compañia;
+   public void setcompa�ia(String compa�ia) {
+       this.compa�ia = compa�ia;
    }
  
    /**
@@ -186,7 +186,7 @@ public class Videojuego implements Entregable{
                "\tTitulo: "+titulo+"\n" +
                "\tHoras estimadas: "+horasEstimadas+"\n" +
                "\tGenero: "+genero+"\n" +
-               "\tcompañia: "+compañia;
+               "\tcompañia: "+compa�ia;
    }
  
    /**
@@ -195,7 +195,7 @@ public class Videojuego implements Entregable{
     * @return true si son iguales y false si son distintos
     */
    public boolean equals(Videojuego a){
-       if (titulo.equalsIgnoreCase(a.getTitulo()) && compañia.equalsIgnoreCase(a.getcompañia())){
+       if (titulo.equalsIgnoreCase(a.getTitulo()) && compa�ia.equalsIgnoreCase(a.getcompa�ia())){
            return true;
        }
        return false;
@@ -215,8 +215,8 @@ public class Videojuego implements Entregable{
     * @param titulo del videojuego
     * @param compañia del videojuego
     */
-   public Videojuego(String titulo, String compañia){
-       this(titulo,HORAS_ESTIMADAS_DEF, "", compañia);
+   public Videojuego(String titulo, String compa�ia){
+       this(titulo,HORAS_ESTIMADAS_DEF, "", compa�ia);
    }
  
    /**
@@ -226,11 +226,11 @@ public class Videojuego implements Entregable{
     * @param genero del videojuego
     * @param compañia del videojuego
     */
-   public Videojuego(String titulo, int horasEstimadas, String genero, String compañia){
+   public Videojuego(String titulo, int horasEstimadas, String genero, String compa�ia){
        this.titulo=titulo;
        this.horasEstimadas=horasEstimadas;
        this.genero=genero;
-       this.compañia=compañia;
+       this.compa�ia=compa�ia;
        this.entregado=false;
    }
 }
